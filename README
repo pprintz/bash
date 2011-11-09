@@ -1,0 +1,13 @@
+# Bash scripts
+
+These are my bash scripts. The directory structure (and some
+cool stuff) was shamelessly stolen from @fnando
+(https://github.com/fnando/bash) =]
+
+So, quoting him:
+
+Just clone this repository to `~/.bash` and
+add the following line to your `~/.bash_profile`
+or equivalent file:
+
+  source ~/.bash/init.sh
