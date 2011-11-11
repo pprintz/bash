@@ -2,6 +2,9 @@
 #
 # Thanks to @darthmv and @fnando
 
+# Reload scripts
+alias rsrc='source ~/.bash_profile'
+
 # Interactive operations
 alias cp='cp -i'
 alias mv='mv -i'
@@ -16,12 +19,16 @@ alias  l='ls'
 alias ll='ls -l'     # long list
 alias la='ls -A'     # all but . and ..
 
-# Postgre controlling
+# PostgreSQL controlling
 alias pgstart='pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start'
 alias pgstop='pg_ctl -D /usr/local/var/postgres stop -s -m fast'
 
 # MongoDB controlling
 alias mongostart='mongod run --config /usr/local/Cellar/mongodb/1.8.2-x86_64/mongod.conf'
+
+# MySQL controlling
+alias mysqlstart='launchctl load -w ~/Library/LaunchAgents/com.mysql.mysqld.plist'
+alias mysqlstop='launchctl unload -w ~/Library/LaunchAgents/com.mysql.mysqld.plist'
 
 # MacOS log
 alias msg='tail -f /var/log/system.log'
