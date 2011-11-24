@@ -1,1 +1,1 @@
-[[ -s "/Users/shiota/.rvm/scripts/rvm" ]] && source "/Users/shiota/.rvm/scripts/rvm"  # This loads RVM into a shell session.
+[[ -s "~/.rvm/scripts/rvm" ]] && source "~/.rvm/scripts/rvm"  # This loads RVM into a shell session.
