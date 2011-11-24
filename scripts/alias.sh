@@ -39,6 +39,10 @@ alias ss='cd ~/Sites/sandbox'
 
 # Bin
 alias be='bundle exec'
+alias ccbare='compass create . --bare --sass-dir "stylesheets/sass" --css-dir "stylesheets" --javascripts-dir "javascripts" --images-dir "images"'
+alias ccdev='compass compile -e development --force'
+alias ccprod='compass compile -e production --force'
+alias ccw='compass watch'
 
 # Cool stuff
 alias jsonget="curl -X GET -H 'Accept: application/json'"
