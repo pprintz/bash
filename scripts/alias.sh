@@ -26,6 +26,9 @@ alias pgstop='pg_ctl -D /usr/local/var/postgres stop -s -m fast'
 # MongoDB controlling
 alias mongostart='mongod run --config /usr/local/Cellar/mongodb/1.8.2-x86_64/mongod.conf'
 
+# Redis
+alias redisstart='redis-server /usr/local/etc/redis.conf'
+
 # MySQL controlling
 alias mysqlstart='launchctl load -w ~/Library/LaunchAgents/com.mysql.mysqld.plist'
 alias mysqlstop='launchctl unload -w ~/Library/LaunchAgents/com.mysql.mysqld.plist'
