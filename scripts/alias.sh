@@ -50,3 +50,5 @@ alias ccw='compass watch'
 # Cool stuff
 alias jsonget="curl -X GET -H 'Accept: application/json'"
 alias svndiff='svn diff --diff-cmd ~/.bash/bin/svnopendiffshim.py'
+# Generates a RTF colored output using Pygments - http://pygments.org/
+function colorize () { pygmentize -f rtf -O "style=monokai,fontface=Monaco" "$1" | pbcopy; }
