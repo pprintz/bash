@@ -1,9 +1,9 @@
 # Alias script
 #
-# Thanks to @darthmv and @fnando
+# Thanks to @mv and @fnando
 
 # Reload scripts
-alias rsrc='source ~/.bash_profile'
+alias rsrc='source ~/.bash/init.sh'
 
 # Interactive operations
 alias cp='cp -i'
@@ -21,23 +21,26 @@ alias la='ls -A'     # all but . and ..
 
 # PostgreSQL controlling
 alias pgstart='pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start'
-alias pgstop='pg_ctl -D /usr/local/var/postgres stop -s -m fast'
+alias  pgstop='pg_ctl -D /usr/local/var/postgres stop -s -m fast'
 
-# MongoDB controlling
-alias mongostart='mongod run --config /usr/local/Cellar/mongodb/1.8.2-x86_64/mongod.conf'
+# MongoDB
+alias mongostart='mongod run'
 
 # Redis
 alias redisstart='redis-server /usr/local/etc/redis.conf'
 
+# Elasticsearch
+alias esstart="elasticsearch -f"
+
 # MySQL controlling
 alias mysqlstart='launchctl load -w ~/Library/LaunchAgents/com.mysql.mysqld.plist'
-alias mysqlstop='launchctl unload -w ~/Library/LaunchAgents/com.mysql.mysqld.plist'
+alias  mysqlstop='launchctl unload -w ~/Library/LaunchAgents/com.mysql.mysqld.plist'
 
 # MacOS log
 alias msg='tail -f /var/log/system.log'
 
 # Dir shortcuts
-alias s='cd ~/Sites'
+alias  s='cd ~/Sites'
 alias ss='cd ~/Sites/sandbox'
 
 # Bin
@@ -49,6 +52,9 @@ alias ccw='compass watch'
 
 # Cool stuff
 alias jsonget="curl -X GET -H 'Accept: application/json'"
-alias svndiff='svn diff --diff-cmd ~/.bash/bin/svnopendiffshim.py'
+
 # Generates a RTF colored output using Pygments - http://pygments.org/
-function colorize () { pygmentize -f rtf -O "style=monokai,fontface=Monaco" "$1" | pbcopy; }
+function colorize () { pygmentize -f rtf -O "style=colorful,fontface=Monaco" "$1" | pbcopy; }
+
+# Locks the mac
+alias lockmac='/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend'
