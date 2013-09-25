@@ -60,4 +60,5 @@ function colorize () { pygmentize -f rtf -O "style=colorful,fontface=Monaco" "$1
 alias lockmac='/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend'
 
 # Converts a given .mov to a GIF
+# https://gist.github.com/dergachev/4627207
 function movtogif () { ffmpeg -i $1 -vf scale=480:-1 -pix_fmt rgb24 -r 24 -f gif - | gifsicle --optimize=3 --delay=3 > converted.gif; }
