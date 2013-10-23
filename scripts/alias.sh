@@ -49,6 +49,7 @@ alias ccbare='compass create . --bare --sass-dir "stylesheets/sass" --css-dir "s
 alias ccdev='compass compile -e development --force'
 alias ccprod='compass compile -e production --force'
 alias ccw='compass watch'
+alias mdm='middleman server --reload-paths=helpers'
 
 # Cool stuff
 alias jsonget="curl -X GET -H 'Accept: application/json'"
