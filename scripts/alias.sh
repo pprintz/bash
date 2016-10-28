@@ -13,6 +13,9 @@ alias rm='rm -i'
 # Show differences in colour
 alias grep='egrep --color'
 
+
+
+
 # Lists
 alias ls='ls -hAFG'
 alias  l='ls'
@@ -31,6 +34,15 @@ alias jsonget="curl -X GET -H 'Accept: application/json'"
 
 # Generates a RTF colored output using Pygments - http://pygments.org/
 function colorize () { pygmentize -f rtf -O "style=colorful,fontface=Monaco" "$1" | pbcopy; }
+
+gclone() {
+	if [ $1 != "" && $2 != ""]; then
+		git clone http://github.com/"$1"/"$2".git
+}
+
+sshclone(){	
+	git clone ssh://"$1"@"$2"	
+}
 
 # Locks the mac
 alias lockmac='/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend'
